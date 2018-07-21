@@ -63,7 +63,7 @@ class ToysController < ApplicationController
       else
         @toy = Toy.find_by_id(params[:id])
         if @toy && @toy.user == current_user
-          if @toy.update(name: params[:name], url: params[:name])
+          if @toy.update(name: params[:name]) && @toy.update(url: params[:url])
             redirect to "/toys/#{@toy.id}"
           else
             redirect to "/toys/#{@toy.id}/edit"

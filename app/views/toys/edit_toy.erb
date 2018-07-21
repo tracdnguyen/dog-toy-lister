@@ -1,7 +1,7 @@
 <h1>Edit Toy</h1>
 
 <form action="/toys/<%=@toy.id%>" method="post">
-  <input type="hidden" name="_method" value="PATCH">
+  <input id="hidden" type="hidden" name="_method" value="patch">
   <p>Name:<input type="text" name="name"></p>
   <p>URL:<input type="text" name="url"></p>
   <input type="submit" value="Submit">
