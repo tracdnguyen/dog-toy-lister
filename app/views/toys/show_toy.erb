@@ -1,0 +1,8 @@
+<h2><%= @toy.name %></br><%= @toy.url %></h2>
+
+<form action="/toys/<%=@toy.id%>/delete" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Toy">
+</form>
+
+<a href="toys/<%=@toy.id%>/edit">Edit Toy </a>
