@@ -37,11 +37,7 @@ class ToysController < ApplicationController
   get '/toys/:id' do
     if logged_in?
       @toy = Toy.find_by_id(params[:id])
-      if @toy && @toy.user == current_user
-        erb :'toys/edit_toy'
-      else
-        redirect to '/toys'
-      end
+      erb :'toys/show_toy'
     else
       redirect to '/login'
     end
