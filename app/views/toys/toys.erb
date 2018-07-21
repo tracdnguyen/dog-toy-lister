@@ -1,0 +1,9 @@
+<p> Welcome, <%= current_user.username %>
+<h2> Everyone's favorite toys are here! </h2>
+
+<% @toys.each do |toy| %>
+  <div>
+    <%= toy.name %></br>
+    <%= toy.url %>
+  </div>
+<% end %>
