@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   use Rack::Flash
 
   get '/signup' do
-    if logged_in?
+    if !logged_in?
       erb :'users/create_user', locals: {message: "Please sign up before you sign in"}
     else
       redirect to '/'
@@ -25,5 +25,7 @@ class UsersController < ApplicationController
       redirect to "users/#{@user.id}"
     end
   end
+
+
 
 end
