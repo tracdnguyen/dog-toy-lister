@@ -58,7 +58,7 @@ class ToysController < ApplicationController
 
   patch '/toys/:id' do
     if logged_in?
-      if params[:name] == "" || params[:url] = ""
+      if params[:name] == "" || params[:url] == ""
         redirect to "/toys/#{params[:id]}/edit"
       else
         @toy = Toy.find_by_id(params[:id])
