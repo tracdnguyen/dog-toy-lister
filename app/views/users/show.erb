@@ -3,7 +3,6 @@
 <% @user.toys.each do |toy| %>
   <div>
     <a href="/toys/<%=toy.id%>"><%= toy.name %></a></br>
-    <a href="<%toy.url%>"><%= toy.url %></a>
+    <a href="<%=toy.url%>"><%= toy.url %></a>
   </div>
 <% end %>
- 
