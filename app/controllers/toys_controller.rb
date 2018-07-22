@@ -77,5 +77,16 @@ class ToysController < ApplicationController
     end
   end
 
+  delete '/toys/:id/delete' do
+    if logged_in?
+      @toy = Toy.find_by_id(params[:id])
+      if @toy && @toy.user == current_user
+        @toy.delete
+      end
+      redirect to "/users/#{params[:id]}"
+    else
+      redirect to '/login'
+    end
+  end
 
 end
