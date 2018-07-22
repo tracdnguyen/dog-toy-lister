@@ -1,4 +1,5 @@
-<h2><%= @toy.name %></br><%= @toy.url %></h2>
+<p><%= @toy.name %></br>
+<a href="<%=@toy.url%>"><%= @toy.url %></a></p>
 
 <form action="/toys/<%=@toy.id%>/delete" method="post">
   <input type="hidden" name="_method" value="DELETE">
