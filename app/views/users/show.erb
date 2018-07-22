@@ -1,4 +1,4 @@
-<h1>Welcome, <%=@user.username%></h1>
+<h3>Welcome, <%=@user.username%></h3>
 
 <% @user.toys.each do |toy| %>
   <div>
@@ -6,3 +6,6 @@
     <a href="<%=toy.url%>"><%= toy.url %></a>
   </div>
 <% end %>
+
+</br></br>
+<a href="/toys">Click here to view everyone else's favorite toy!</a>
