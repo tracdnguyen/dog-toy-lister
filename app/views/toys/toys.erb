@@ -4,6 +4,6 @@
 <% @toys.each do |toy| %>
   <div>
     <%= toy.name %></br>
-    <%= toy.url %>
+    <a href="<%=toy.url%>"><%= toy.url %></a></br></br>
   </div>
 <% end %>
