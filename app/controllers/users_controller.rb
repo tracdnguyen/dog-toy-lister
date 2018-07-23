@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   post '/signup' do
     if params[:username] == "" || params[:password] == ""
       flash[:error] = "Please sign up with both a username and password."
-      redirect '/users/create_user'
+      redirect '/signup'
     else
       @user = User.new(:username => params[:username], :password => params[:password])
       @user.save
