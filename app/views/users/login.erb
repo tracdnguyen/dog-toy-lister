@@ -1,4 +1,7 @@
 <h1>Login to Dog Toy Lister!</h1>
+<% if flash.has?(:error) %>
+  <%= flash[:error] %>
+<% end %>
 <form method="post" action="/login">
   <p>Username: <input type="text" name="username" required></br></p>
   <p>Password: <input type="text" name="password" required></p>

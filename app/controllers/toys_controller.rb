@@ -1,4 +1,6 @@
 class ToysController < ApplicationController
+  use Rack::Flash
+
   get '/toys' do
     if logged_in?
       @toys = Toy.all
@@ -12,6 +14,7 @@ class ToysController < ApplicationController
     if logged_in?
       erb :'toys/create_toy'
     else
+      flash[:error] = "Please login to create a new toy!"
       redirect to '/login'
     end
   end

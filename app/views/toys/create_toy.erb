@@ -1,5 +1,8 @@
 <h2>Add a new favorite toy!</h2>
 <form action="/toys" method="POST">
+  <% if flash.has?(:error) %>
+    <%= flash[:error] %>
+  <% end %>
   <p>Name: <input type="text" name="name" required></p>
   <p>URL: <input type="url" name="url" required></p>
   <input type="submit" value="submit">
