@@ -9,7 +9,7 @@ Specs:
 - [x] Include user accounts - User accounts are made by configuring and enabling sessions in controllers
 - [x] Ensure that users can't modify content created by other users - In both patch and delete routes for toys controller, it checks for the current user being the one trying to edit/delete
 - [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying - Create in get toys/new, Reading in get toys/:id and get /toys, Updating in post   toys/:id/edit, Destroying in delete toy/:id/delete
-- [ ] Include user input validations
+- [x] Include user input validations - Form contains required for username and password
 - [ ] Display validation failures to user with error message (example form URL e.g. /posts/new)
 - [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
