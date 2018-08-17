@@ -40,7 +40,8 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect to '/'
     else
-      redirect to '/signup'
+      flash[:error] = "Username or password is incorrect, retry or click sign up to create an account."
+      redirect to '/login'
     end
   end
 
