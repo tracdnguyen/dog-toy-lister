@@ -1,6 +1,21 @@
 <p><%= @toy.name %></br>
 <a href="<%=@toy.url%>"><%= @toy.url %></a></p>
 
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>URL</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td><img src="<%= @toy.image_url %>" alt="photo of toy" ></td>
+    <td><%= @toy.name %></td>
+    <td><%= @toy.url %></td>
+    <td>$<%= @toy.price %></td>
+  </tr>
+</table>
+
 <form action="/toys/<%=@toy.id%>/delete" method="post">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Toy">
