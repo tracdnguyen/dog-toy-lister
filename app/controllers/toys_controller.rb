@@ -52,6 +52,7 @@ class ToysController < ApplicationController
       if @toy && @toy.user == current_user
         erb :'toys/edit_toy'
       else
+        flash[:error] = "Users can only edit their own favorite toys."
         redirect to '/toys'
       end
     else
