@@ -25,7 +25,7 @@ class ToysController < ApplicationController
         flash[:error] = "Please enter both a name and url for your new favorite toy!"
         redirect to "/toys/new"
       else
-        @toy = current_user.toys.build(name: params[:name], url: params[:url])
+        @toy = current_user.toys.build(name: params[:name], url: params[:url], image_url: params[:image_url], price: params[:price])
         if @toy.save
           redirect to "/toys/#{@toy.id}"
         else
