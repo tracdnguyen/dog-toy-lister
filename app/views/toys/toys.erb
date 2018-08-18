@@ -15,3 +15,18 @@
 </br>
 
 <a href="/logout"> Log Out </a>
+
+
+<table>
+  <% for toy in @toys %>
+  <tr>
+    <th>Name</th>
+    <th>URL</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td><%= toy.name %></td>
+    <td><%= toy.url %></td>
+  </tr>
+    <% end %>
+</table>
