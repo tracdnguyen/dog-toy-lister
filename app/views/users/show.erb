@@ -1,15 +1,16 @@
-<h3>Welcome, <%=current_user.username%></h3>
+<div class="container">
+  <h3>Welcome, <%=current_user.username%></h3>
 
-<% @user.toys.each do |toy| %>
-  <div>
-    <a href="/toys/<%=toy.id%>"><%= toy.name %></a></br>
-    <a href="<%=toy.url%>"><%= toy.url %></a>
-  </div>
-<% end %>
+  <% @user.toys.each do |toy| %>
+    <div>
+      <a href="/toys/<%=toy.id%>"><%= toy.name %></a></br>
+      <a href="<%=toy.url%>"><%= toy.url %></a>
+    </div>
+  <% end %>
 
 
-</br></br>
-<a href="/toys">Click here to view everyone else's favorite toy!</a></br>
-<a href="/toys/new">Click here to add a new favorite toy!</a>
-</br></br>
-<a href="/logout"> Log Out </a>
+  </br></br>
+  <a href="/toys">Click here to view everyone else's favorite toy!</a></br>
+  <a href="/toys/new">Click here to add a new favorite toy!</a>
+  </br></br>
+</div>
