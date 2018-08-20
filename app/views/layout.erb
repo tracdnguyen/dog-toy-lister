@@ -12,6 +12,11 @@
         <!-- Our Custom CSS -->
         <link rel="stylesheet" href="style.css">
     </head>
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    </style>
     <body>
           <div>
             <nav class="navbar navbar-default navbar-fixed-top">
@@ -46,7 +51,11 @@
                       </ul>
 
                       <!-- Navbar Button -->
-                      <button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+                      <% if logged_in? %>
+                        <a href="/logout" class="btn btn-info navbar-btn navbar-right" role="button">Logout</a>
+                      <% else %>
+                        <a href="/login" class="btn btn-info navbar-btn navbar-right" role="button">Sign In</a>
+                      <%end %>
 
                       <!-- Navbar Text -->
                        <p class="navbar-text">Filler</p>
