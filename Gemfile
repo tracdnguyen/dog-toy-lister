@@ -13,3 +13,4 @@ gem 'bcrypt'
 gem "tux"
 gem 'rack'
 gem 'rack-flash3'
+gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
