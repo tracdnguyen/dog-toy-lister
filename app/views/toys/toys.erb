@@ -1,4 +1,3 @@
-
 <div class="container">
   <% if flash.has?(:error) %>
     <%= flash[:error] %>
@@ -18,7 +17,7 @@
         <tbody>
           <% for toy in @toys %>
           <tr>
-            <td class="text-center"><%= toy.name %></td>
+            <td class="text-center"><a href="/toys/<%= toy.id%>"><%= toy.name %></a></td>
             <td class="text-center"><img style="width:100%;" class="img-responsive" src="<%= toy.image_url %>"/></td>
             <td class="text-center"><a href="<%= toy.url %>"><%= toy.url %></a></td>
             <td class="text-center">$<%= toy.price %></td>
