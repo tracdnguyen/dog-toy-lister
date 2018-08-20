@@ -1,25 +1,31 @@
 <div class="container">
-  <table>
-    <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>URL</th>
-      <th>Price</th>
-    </tr>
-    <tr>
-      <td><img src="<%= @toy.image_url %>" alt="photo of toy" ></td>
-      <td><%= @toy.name %></td>
-      <td><a href="<%= @toy.url %>"><%= @toy.url %></a></td>
-      <td>$<%= @toy.price %></td>
-    </tr>
-  </table>
+  <body>
+    <br><br><br>
+      <table style="width:100%">
+        <thead>
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Image</th>
+            <th class="text-center">URL</th>
+            <th class="text-center">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center"><a href="/toys/<%= @toy.id%>"><%= @toy.name %></a></td>
+            <td class="text-center"><img style="width:100%;" class="img-responsive" src="<%= @toy.image_url %>"/></td>
+            <td class="text-center"><a href="<%= @toy.url %>"><%= @toy.url %></a></td>
+            <td class="text-center">$<%= @toy.price %></td>
+          </tr>
+        </tbody>
+      </table>
+    </body>
 
-  <form action="/toys/<%=@toy.id%>/delete" method="post">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete Toy">
-  </form>
-  <a href="/toys/<%=@toy.id%>/edit" class="btn btn-primary">
-    Edit Toy
-  </a>
+    </br></br></br></br></br></br>
+    <form action="/toys/<%=@toy.id%>/delete" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete Toy">
+    </form>
+    <a href="/toys/<%=@toy.id%>/edit" class="btn btn-primary">Edit Toy</a>
 
 </div>
