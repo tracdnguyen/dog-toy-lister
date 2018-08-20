@@ -14,7 +14,7 @@
     </head>
     <style>
       body {
-        padding-top: 50px;
+        padding-top: 70px;
       }
     </style>
     <body>
@@ -43,7 +43,11 @@
                       <!-- Navbar Menu -->
                       <ul class="nav navbar-nav navbar-center">
                           <li class="active">
-                              <a href="/users/<%=current_user.id%>">Home</a>
+                              <% if logged_in? %>
+                                <a href="/users/<%=current_user.id%>">Home</a>
+                              <% else %>
+                                <a href="/">Home</a>
+                              <%end %>
                           </li>
                           <li>
                               <a href="/toys/new">Add New Toy</a>
