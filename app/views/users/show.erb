@@ -5,28 +5,29 @@
   <a href="/toys">Click here to view everyone else's favorite toy!</a></br>
   <a href="/toys/new">Click here to add a new favorite toy!</a>
   </br></br>
-
-  <body>
-    <br><br><br>
-      <table style="width:100%">
-        <thead>
-          <tr>
-            <th class="text-center">Name</th>
-            <th class="text-center">Image</th>
-            <th class="text-center">URL</th>
-            <th class="text-center">Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% for toy in @user.toys %>
-          <tr>
-            <td class="text-center"><a href="/toys/<%= toy.id%>"><%= toy.name %></a></td>
-            <td class="text-center"><img style="width:100%;" class="img-responsive" src="<%= toy.image_url %>"/></td>
-            <td class="text-center"><a href="<%= toy.url %>"><%= toy.url %></a></td>
-            <td class="text-center">$<%= toy.price %></td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </body>
+  <% if @user.toys.first %>
+    <body>
+      <br><br><br>
+        <table style="width:100%">
+          <thead>
+            <tr>
+              <th class="text-center">Name</th>
+              <th class="text-center">Image</th>
+              <th class="text-center">URL</th>
+              <th class="text-center">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for toy in @user.toys %>
+            <tr>
+              <td class="text-center"><a href="/toys/<%= toy.id%>"><%= toy.name %></a></td>
+              <td class="text-center"><img style="width:100%;" class="img-responsive" src="<%= toy.image_url %>"/></td>
+              <td class="text-center"><a href="<%= toy.url %>"><%= toy.url %></a></td>
+              <td class="text-center">$<%= toy.price %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </body>
+  <% end %>
 </div>
