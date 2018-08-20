@@ -1,24 +1,30 @@
+
 <div class="container">
   <% if flash.has?(:error) %>
     <%= flash[:error] %>
   <% end %>
   <h2> Everyone's favorite toys are here! </h2>
-
-  <table>
-
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>URL</th>
-      <th>Price</th>
-    </tr>
-    <% for toy in @toys %>
-    <tr>
-      <td><%= toy.name %></td>
-      <td><img src="<%= toy.image_url %>" alt="photo of toy" ></td>
-      <td><a href="<%= toy.url %>"><%= toy.url %></td>
-      <td>$<%= toy.price %></td>
-    </tr>
-      <% end %>
-  </table>
+  <body>
+    <br><br><br>
+      <table style="width:100%">
+        <thead>
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Image</th>
+            <th class="text-center">URL</th>
+            <th class="text-center">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for toy in @toys %>
+          <tr>
+            <td class="text-center"><%= toy.name %></td>
+            <td class="text-center"><img style="width:100%;" class="img-responsive" src="<%= toy.image_url %>"/></td>
+            <td class="text-center"><a href="<%= toy.url %>"><%= toy.url %></a></td>
+            <td class="text-center">$<%= toy.price %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </body>
 </div>
