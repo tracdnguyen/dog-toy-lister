@@ -1,8 +1,7 @@
 <% if flash.has?(:error) %>
   <%= flash[:error] %>
 <% end %>
-<p> Welcome, <%= current_user.username %></br>
-<a href="/users/<%=current_user.id%>"> View Your Toys </a></br>
+
 <h2> Everyone's favorite toys are here! </h2>
 
 <% @toys.each do |toy| %>
