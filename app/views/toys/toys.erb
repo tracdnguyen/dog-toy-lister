@@ -1,35 +1,24 @@
-<% if flash.has?(:error) %>
-  <%= flash[:error] %>
-<% end %>
+<div class="container">
+  <% if flash.has?(:error) %>
+    <%= flash[:error] %>
+  <% end %>
+  <h2> Everyone's favorite toys are here! </h2>
 
-<h2> Everyone's favorite toys are here! </h2>
+  <table>
 
-<% @toys.each do |toy| %>
-  <div>
-    <%= toy.name %></br>
-    <a href="<%=toy.url%>"><%= toy.url %></a></br></br>
-  </div>
-<% end %>
-
-</br>
-
-<a href="/logout"> Log Out </a>
-
-
-<table>
-
-  <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>URL</th>
-    <th>Price</th>
-  </tr>
-  <% for toy in @toys %>
-  <tr>
-    <td><img src="<%= toy.image_url %>" alt="photo of toy" ></td>
-    <td><%= toy.name %></td>
-    <td><%= toy.url %></td>
-    <td>$<%= toy.price %></td>
-  </tr>
-    <% end %>
-</table>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>URL</th>
+      <th>Price</th>
+    </tr>
+    <% for toy in @toys %>
+    <tr>
+      <td><img src="<%= toy.image_url %>" alt="photo of toy" ></td>
+      <td><%= toy.name %></td>
+      <td><%= toy.url %></td>
+      <td>$<%= toy.price %></td>
+    </tr>
+      <% end %>
+  </table>
+</div>
