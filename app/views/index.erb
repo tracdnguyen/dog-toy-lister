@@ -1,10 +1,8 @@
-<p>Welcome to Dog Toy Lister!</h2>
-
-<nav>
+<div class="container">
+  <p>Welcome to Dog Toy Lister!</p>
   <% if logged_in? %>
 
     <a href="/toys/new"> Add New Favorite Toy </a></br>
-    <a href="/users/<%=current_user.id%>"> View Your Toys </a></br>
     <a href="/toys">Click here to view everyone else's favorite toy!</a></br></br>
 
 
@@ -14,4 +12,4 @@
     <a href="/login"> Sign In </a>
   <%end %>
 
-</nav>
+</div>
