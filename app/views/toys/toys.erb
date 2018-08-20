@@ -7,15 +7,15 @@
   <table>
 
     <tr>
-      <th>Image</th>
       <th>Name</th>
+      <th>Image</th>
       <th>URL</th>
       <th>Price</th>
     </tr>
     <% for toy in @toys %>
     <tr>
-      <td><img src="<%= toy.image_url %>" alt="photo of toy" ></td>
       <td><%= toy.name %></td>
+      <td><img src="<%= toy.image_url %>" alt="photo of toy" ></td>
       <td><a href="<%= toy.url %>"><%= toy.url %></td>
       <td>$<%= toy.price %></td>
     </tr>
