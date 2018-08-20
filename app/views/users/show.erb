@@ -6,21 +6,27 @@
   <a href="/toys/new">Click here to add a new favorite toy!</a>
   </br></br>
 
-  <table>
-
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>URL</th>
-      <th>Price</th>
-    </tr>
-    <% for toy in @user.toys %>
-    <tr>
-      <td><a href="/toys/<%= toy.id%>"><%= toy.name %></a></td>
-      <td><img src="<%= toy.image_url %>" alt="photo of toy" ></td>
-      <td><a href="<%= toy.url %>"><%= toy.url %></a></td>
-      <td>$<%= toy.price %></td>
-    </tr>
-      <% end %>
-  </table>
+  <body>
+    <br><br><br>
+      <table style="width:100%">
+        <thead>
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Image</th>
+            <th class="text-center">URL</th>
+            <th class="text-center">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for toy in @user.toys %>
+          <tr>
+            <td class="text-center"><a href="/toys/<%= toy.id%>"><%= toy.name %></a></td>
+            <td class="text-center"><img style="width:100%;" class="img-responsive" src="<%= toy.image_url %>"/></td>
+            <td class="text-center"><a href="<%= toy.url %>"><%= toy.url %></a></td>
+            <td class="text-center">$<%= toy.price %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </body>
 </div>
