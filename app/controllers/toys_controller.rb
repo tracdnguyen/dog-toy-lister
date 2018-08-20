@@ -6,6 +6,7 @@ class ToysController < ApplicationController
       @toys = Toy.all
       erb :'toys/toys'
     else
+      flash[:error] = "Please login to view favorite toys posted by other users!"
       redirect to '/login'
     end
   end
