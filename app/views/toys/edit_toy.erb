@@ -2,7 +2,9 @@
 
 <form action="/toys/<%=@toy.id%>" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
-  <p>Name:<input type="text" name="name" ></p>
-  <p>URL:<input type="url" name="url" ></p>
+  <p>Name: <input type="text" name="name" required></p>
+  <p>URL: <input type="url" name="url" required></p>
+  <p>Image URL (Optional): <input type="url" name="image_url"></p>
+  <p>Price: $<input type="number" name="price" step="0.01" required></p>
   <input type="submit" value="Submit">
 </form>
