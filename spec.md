@@ -11,10 +11,10 @@ Specs:
 - [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying - Create in get toys/new, Reading in get toys/:id and get /toys, Updating in post   toys/:id/edit, Destroying in delete toy/:id/delete
 - [x] Include user input validations - Form contains required for username and password
 - [x] Display validation failures to user with error message (example form URL e.g. /posts/new) - Displays error message if user is not logged in and tries to create a new toy
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code - Readme includes all info
 
 Confirm
-- [ ] You have a large number of small Git commits
-- [ ] Your commit messages are meaningful
-- [ ] You made the changes in a commit that relate to the commit message
-- [ ] You don't include changes in a commit that aren't related to the commit message
+- [x] You have a large number of small Git commits
+- [x] Your commit messages are meaningful
+- [x] You made the changes in a commit that relate to the commit message
+- [x] You don't include changes in a commit that aren't related to the commit message
