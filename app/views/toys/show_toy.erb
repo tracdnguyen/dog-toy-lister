@@ -1,21 +1,25 @@
-<table>
-  <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>URL</th>
-    <th>Price</th>
-  </tr>
-  <tr>
-    <td><img src="<%= @toy.image_url %>" alt="photo of toy" ></td>
-    <td><%= @toy.name %></td>
-    <td><a href="<%= @toy.url %>"><%= @toy.url %></a></td>
-    <td>$<%= @toy.price %></td>
-  </tr>
-</table>
+<div class="container">
+  <table>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>URL</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td><img src="<%= @toy.image_url %>" alt="photo of toy" ></td>
+      <td><%= @toy.name %></td>
+      <td><a href="<%= @toy.url %>"><%= @toy.url %></a></td>
+      <td>$<%= @toy.price %></td>
+    </tr>
+  </table>
 
-<form action="/toys/<%=@toy.id%>/delete" method="post">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Delete Toy">
-</form>
+  <form action="/toys/<%=@toy.id%>/delete" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Toy">
+  </form>
+  <a href="/toys/<%=@toy.id%>/edit" class="btn btn-primary">
+    Edit Toy
+  </a>
 
-<a href="/toys/<%=@toy.id%>/edit">Edit Toy </a>
+</div>
