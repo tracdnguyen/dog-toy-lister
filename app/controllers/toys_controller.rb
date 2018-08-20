@@ -86,8 +86,11 @@ class ToysController < ApplicationController
       @toy = Toy.find_by_id(params[:id])
       if @toy && @toy.user == current_user
         @toy.delete
+        redirect to "/users/#{params[:id]}"
+      else
+        flash[:error] = "Users can only delete their own favorite toys."
+        redirect to '/toys'
       end
-      redirect to "/users/#{params[:id]}"
     else
       redirect to '/login'
     end
