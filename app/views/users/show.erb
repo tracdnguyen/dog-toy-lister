@@ -16,9 +16,9 @@
     </tr>
     <% for toy in @user.toys %>
     <tr>
-      <td><%= toy.name %></td>
+      <td><a href="/toys/<%= toy.id%>"><%= toy.name %></a></td>
       <td><img src="<%= toy.image_url %>" alt="photo of toy" ></td>
-      <td><%= toy.url %></td>
+      <td><a href="<%= toy.url %>"><%= toy.url %></a></td>
       <td>$<%= toy.price %></td>
     </tr>
       <% end %>
