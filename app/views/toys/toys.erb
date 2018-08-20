@@ -16,7 +16,7 @@
     <tr>
       <td><img src="<%= toy.image_url %>" alt="photo of toy" ></td>
       <td><%= toy.name %></td>
-      <td><%= toy.url %></td>
+      <td><a href="<%= toy.url %>"><%= toy.url %></td>
       <td>$<%= toy.price %></td>
     </tr>
       <% end %>
