@@ -22,8 +22,8 @@ class ToysController < ApplicationController
 
   post '/toys' do
     if logged_in?
-      if params[:name] == "" || params[:url] == ""
-        flash[:error] = "Please enter both a name and url for your new favorite toy!"
+      if params[:name] == "" || params[:url] == "" || params[:price] = ""
+        flash[:error] = "Fields for name, url, and price cannot be left blank!"
         redirect to "/toys/new"
       else
         @toy = current_user.toys.build(name: params[:name], url: params[:url], image_url: params[:image_url], price: params[:price])
